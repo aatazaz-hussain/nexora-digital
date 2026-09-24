@@ -1,0 +1,339 @@
+.footer {
+  position: relative;
+  padding: 96px 24px 32px;
+  background: #fafbff;
+  overflow: hidden;
+}
+
+.footerPanel {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 64px 48px 32px;
+  border-radius: 32px;
+  background: #e8f1ff;
+  border: 1px solid rgba(30, 94, 255, 0.22);
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 40px 100px -40px rgba(11, 15, 26, 0.18),
+    0 20px 60px -30px rgba(30, 94, 255, 0.28);
+}
+
+.footerGlow {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 380px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(30, 94, 255, 0.2) 0%,
+    transparent 65%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.footerCircuit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(30, 94, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 94, 255, 0.1) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 80%);
+}
+
+.brandBlock {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brandLogo {
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(30, 94, 255, 0.22));
+  transition: filter 260ms ease, transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brandBlock:hover .brandLogo {
+  filter: drop-shadow(0 8px 26px rgba(30, 94, 255, 0.5));
+  transform: translateY(-2px);
+}
+
+.brandText {
+  margin-top: 24px;
+  max-width: 380px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(11, 15, 26, 0.68);
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brandText:hover {
+  color: rgba(11, 15, 26, 0.9);
+}
+
+.socialsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.socialButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(30, 94, 255, 0.22);
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(11, 15, 26, 0.75);
+  overflow: hidden;
+  transition: color 220ms ease, border-color 220ms ease,
+    background 220ms ease, transform 240ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 240ms ease;
+}
+
+.socialButton::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(30, 94, 255, 0.22) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+.socialButton:hover {
+  color: #1e5eff;
+  border-color: rgba(30, 94, 255, 0.65);
+  background: rgba(30, 94, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -12px rgba(30, 94, 255, 0.6);
+}
+
+.socialButton:hover::before {
+  opacity: 1;
+}
+
+.socialIcon {
+  position: relative;
+  z-index: 1;
+}
+
+.linkHeading {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0b0f1a;
+  margin-bottom: 20px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(11, 15, 26, 0.68);
+  width: fit-content;
+  transition: color 200ms ease, transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footerLink:hover {
+  color: #1e5eff;
+  transform: translateX(4px);
+}
+
+.footerLinkArrow {
+  color: #1e5eff;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.footerLink:hover .footerLinkArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(11, 15, 26, 0.72);
+  transition: color 200ms ease, transform 220ms ease;
+}
+
+.contactRow:hover {
+  color: #0b0f1a;
+  transform: translateX(2px);
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(30, 94, 255, 0.12);
+  border: 1px solid rgba(30, 94, 255, 0.28);
+  color: #1e5eff;
+  transition: background 220ms ease, border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.contactRow:hover .contactIcon {
+  background: rgba(30, 94, 255, 0.22);
+  border-color: rgba(30, 94, 255, 0.55);
+  box-shadow: 0 8px 20px -8px rgba(30, 94, 255, 0.6);
+}
+
+.contactMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactLabel {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(11, 15, 26, 0.48);
+}
+
+.contactValue {
+  font-size: 14px;
+  color: rgba(11, 15, 26, 0.86);
+}
+
+.availabilityRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(30, 94, 255, 0.22);
+  font-size: 12.5px;
+  color: rgba(11, 15, 26, 0.75);
+}
+
+.statusDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+  animation: footerPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes footerPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.05); }
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.bottomBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  margin-top: 56px;
+  border-top: 1px solid rgba(30, 94, 255, 0.18);
+  font-size: 13px;
+  color: rgba(11, 15, 26, 0.55);
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.legalLink {
+  color: rgba(11, 15, 26, 0.6);
+  transition: color 200ms ease;
+}
+
+.legalLink:hover {
+  color: #1e5eff;
+}
+
+.legalDivider {
+  width: 1px;
+  height: 12px;
+  background: rgba(11, 15, 26, 0.18);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottomBar {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr;
+    gap: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 64px 16px 24px;
+  }
+  .footerPanel {
+    padding: 40px 24px 24px;
+    border-radius: 24px;
+  }
+  .brandLogo {
+    height: 56px;
+  }
+}
