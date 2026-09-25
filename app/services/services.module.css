@@ -822,6 +822,11 @@
   .ctaButtons .btnPrimary, .ctaButtons .btnSecondary { width: 100%; justify-content: center; }
   .serviceCtaWrap { flex-direction: column; align-items: flex-start; }
   .serviceCtaHint { display: none; }
+  .heroBgImage {
+    object-fit: contain;
+    object-position: center center;
+    background: #050810;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

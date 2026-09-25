@@ -62,8 +62,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="antialiased">
+<html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${spaceGrotesk.variable}`}>      <body className="antialiased">
         <RevealProvider />
         <Navbar />
         <main className="pt-24">{children}</main>

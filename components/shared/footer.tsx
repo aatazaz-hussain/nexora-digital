@@ -14,20 +14,20 @@ import { cn } from "@/lib/utils";
 import styles from "./footer.module.css";
 
 const companyLinks = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Our Work", href: "/work" },
-  { label: "Our Process", href: "/process" },
-  { label: "Contact", href: "/contact" },
+  { label: "Our Portfolio", href: "/work" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const serviceLinks = [
-  { label: "Creative Design & Branding", href: "/services/creative-design" },
-  { label: "Social Media Marketing", href: "/services/social-media-marketing" },
-  { label: "Digital Marketing", href: "/services/digital-marketing" },
-  { label: "SEO & Search Growth", href: "/services/seo" },
-  { label: "Web Design & Development", href: "/services/web-development" },
-  { label: "AI Solutions", href: "/services/ai-solutions" },
-  { label: "Strategic Growth", href: "/services/strategic-growth" },
+  { label: "Creative Design & Branding", href: "/services" },
+  { label: "Social Media Marketing", href: "/services" },
+  { label: "Digital Marketing", href: "/services" },
+  { label: "SEO & Search Growth", href: "/services" },
+  { label: "Web Design & Development", href: "/services" },
+  { label: "AI Solutions", href: "/services" },
+  { label: "Strategic Growth", href: "/services" },
 ];
 
 const legalLinks = [
@@ -74,7 +74,11 @@ export function Footer() {
 
         <div className={styles.grid}>
           <div>
-            <Link href="/" className={styles.brandBlock} aria-label="Nexora Digital">
+            <Link
+              href="/"
+              className={styles.brandBlock}
+              aria-label="Nexora Digital"
+            >
               <Image
                 src="/images/logo.png"
                 alt="Nexora Digital"
@@ -126,7 +130,7 @@ export function Footer() {
             <h3 className={styles.linkHeading}>Services</h3>
             <ul className={styles.linkList}>
               {serviceLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link href={link.href} className={styles.footerLink}>
                     <span>{link.label}</span>
                     <ArrowRight

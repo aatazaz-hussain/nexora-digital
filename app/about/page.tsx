@@ -55,14 +55,8 @@ const team = [
     bio: "Leads Nexora's vision, brand direction and long-term partnerships — shaping how the studio grows and who it grows with.",
   },
   {
-    initials: "JI",
-    name: "Javed Iqbal",
-    role: "Director",
-    bio: "Oversees operations, delivery and client success across every engagement — from first brief to final handoff.",
-  },
-  {
     initials: "SN",
-    name: "Samiya Nazeer",
+    name: "Samia Nazir",
     role: "Chief Technology Officer",
     bio: "Drives the technology, engineering and product architecture behind every digital platform we build.",
   },
