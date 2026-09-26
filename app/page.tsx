@@ -314,13 +314,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          <div className="processFooterCta" data-reveal>
-            <Link href="/process" className="processLink">
-              <span>See Full Process</span>
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
 

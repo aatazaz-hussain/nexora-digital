@@ -1186,7 +1186,7 @@
     padding: 20px 40px 80px;
   }
   .hero {
-    padding: 140px 40px 100px;
+    padding: 40px 40px 100px;
   }
   .storyGrid {
     grid-template-columns: 1fr 1fr;
@@ -1208,7 +1208,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 20px 80px;
+    padding: 20px 20px 80px;
     min-height: 72vh;
   }
   .heroHeadline {

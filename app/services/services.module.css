@@ -795,7 +795,7 @@
 @media (min-width: 1024px) {
   .section { padding: 20px 40px; }
   .ctaSection { padding: 20px 40px 80px; }
-  .hero { padding: 140px 40px 100px; }
+  .hero { padding: 40px 40px 100px; }
 
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr);
@@ -813,7 +813,7 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 120px 20px 80px; min-height: 72vh; }
+  .hero { padding: 20px 20px 80px; min-height: 72vh; }
   .heroHeadline { font-size: clamp(32px, 8vw, 48px); }
   .heroCtaRow { width: 100%; }
   .btnPrimary, .btnSecondary { width: 100%; justify-content: center; }
